@@ -9,6 +9,7 @@
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-900">
 
+    <!-- Header -->
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -22,7 +23,9 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Sidebar Menu -->
         <nav class="md:col-span-1 space-y-2 sticky top-24 self-start">
             <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase px-3">Menu Rujukan</p>
             <a href="index.html" class="block px-3 py-2 rounded-lg bg-slate-800 text-cyan-400 font-medium"><i class="fa-solid fa-house mr-2"></i> 0. Proses Mula</a>
@@ -32,8 +35,11 @@
             <a href="docker-cleanup.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-trash-can mr-2"></i> 4. Pembersihan Bersih</a>
             <a href="problems.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-triangle-exclamation mr-2"></i> 5. Masalah Lazim & Solusi</a>
             <a href="qa.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-circle-question mr-2"></i> 6. Q&A</a>
+            <hr class="border-slate-800 my-2">
+            <a href="quick_reference.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-bolt mr-2"></i> ⚡ Rujukan Pantas (All-in-One)</a>
         </nav>
 
+        <!-- Content Area -->
         <div class="md:col-span-3 space-y-12">
             <section class="space-y-4">
                 <h2 class="text-2xl font-bold text-slate-100 flex items-center border-b border-slate-800 pb-2"><span class="text-cyan-400 mr-2">00.</span> Proses Mula & Penyediaan Persekitaran</h2>
@@ -59,10 +65,12 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="border-t border-slate-800 mt-20 bg-slate-950 text-slate-500 py-6 text-center text-xs">
         <p>© 2026 SysMonitor Dev Guide. Ditulis untuk pengurusan pantas WSL & Docker Engine.</p>
     </footer>
 
+    <!-- Script -->
     <script>
         function copyCode(button) {
             const container = button.parentElement;
