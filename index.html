@@ -24,23 +24,31 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Sidebar Menu -->
-        <nav class="md:col-span-1 space-y-2 sticky top-24 self-start">
-            <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase px-3">Menu Rujukan</p>
-            <a href="index.html" class="block px-3 py-2 rounded-lg bg-slate-800 text-cyan-400 font-medium"><i class="fa-solid fa-house mr-2"></i> 0. Proses Mula</a>
-            <a href="wsl.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-terminal mr-2"></i> 1. Pengurusan WSL2</a>
-            <a href="docker-setup.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-gear mr-2"></i> 2. Setup Docker</a>
-            <a href="docker-manage.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-cubes mr-2"></i> 3. Urus Container</a>
-            <a href="docker-cleanup.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-trash-can mr-2"></i> 4. Pembersihan Bersih</a>
-            <a href="problems.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-triangle-exclamation mr-2"></i> 5. Masalah Lazim & Solusi</a>
-            <a href="qa.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-circle-question mr-2"></i> 6. Q&A</a>
-            <hr class="border-slate-800 my-2">
-            <a href="quick_reference.html" class="block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium"><i class="fa-solid fa-bolt mr-2"></i> ⚡ Rujukan Pantas (All-in-One)</a>
+    <main class="max-w-5xl mx-auto px-4 py-6 md:py-8 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+        
+        <!-- Sidebar / Topbar Menu -->
+        <nav class="md:col-span-1 sticky top-20 z-40 bg-slate-900/90 backdrop-blur md:bg-transparent py-2 md:py-0 md:self-start md:top-24">
+            <p class="text-xs font-semibold tracking-wider text-slate-500 uppercase px-3 hidden md:block mb-2">Menu Rujukan</p>
+            
+            <!-- Flex row untuk mobile (boleh skrol tepi), manakala flex col untuk desktop -->
+            <div class="flex flex-row md:flex-col overflow-x-auto md:overflow-x-visible space-x-2 md:space-x-0 md:space-y-2 px-2 md:px-0 no-scrollbar pb-3 md:pb-0">
+                <a href="index.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg bg-slate-800 text-cyan-400 font-medium text-sm md:text-base"><i class="fa-solid fa-house mr-1.5 md:mr-2"></i> 0. Mula</a>
+                <a href="wsl.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-terminal mr-1.5 md:mr-2"></i> 1. WSL2</a>
+                <a href="docker-setup.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-gear mr-1.5 md:mr-2"></i> 2. Setup</a>
+                <a href="docker-manage.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-cubes mr-1.5 md:mr-2"></i> 3. Urus</a>
+                <a href="docker-cleanup.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-trash-can mr-1.5 md:mr-2"></i> 4. Bersih</a>
+                <a href="problems.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-triangle-exclamation mr-1.5 md:mr-2"></i> 5. Solusi</a>
+                <a href="qa.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base"><i class="fa-solid fa-circle-question mr-1.5 md:mr-2"></i> 6. Q&A</a>
+                
+                <!-- Pembahagi untuk desktop sahaja -->
+                <hr class="border-slate-800 my-2 hidden md:block">
+                
+                <a href="quick_reference.html" class="whitespace-nowrap shrink-0 block px-3 py-2 rounded-lg hover:bg-slate-800 text-slate-300 hover:text-cyan-400 transition font-medium text-sm md:text-base border border-dashed border-slate-700 md:border-none"><i class="fa-solid fa-bolt mr-1.5 md:mr-2 text-amber-400"></i> ⚡ Rujukan Pantas</a>
+            </div>
         </nav>
 
         <!-- Content Area -->
-        <div class="md:col-span-3 space-y-12">
+        <div class="md:col-span-3 space-y-12 mt-2 md:mt-0">
             <section class="space-y-4">
                 <h2 class="text-2xl font-bold text-slate-100 flex items-center border-b border-slate-800 pb-2"><span class="text-cyan-400 mr-2">00.</span> Proses Mula & Penyediaan Persekitaran</h2>
                 <p class="text-slate-400 text-sm">Langkah awal yang perlu dilakukan pada sistem Windows sebelum mengaktifkan atau menguruskan WSL2 dan kontena Docker.</p>
@@ -53,12 +61,12 @@
                     <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 relative group">
                         <span class="text-xs font-semibold text-slate-500 block mb-1">2. Semak Status Pemasangan WSL Sedia Ada</span>
                         <code class="text-emerald-400 font-mono block text-sm">wsl --status</code>
-                        <button onclick="copyCode(this)" class="absolute right-3 top-3 opacity-0 group-hover:opacity-100 bg-slate-800 hover:bg-slate-700 text-slate-400 p-1.5 rounded transition text-xs"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button onclick="copyCode(this)" class="absolute right-3 top-3 opacity-0 md:group-hover:opacity-100 bg-slate-800 hover:bg-slate-700 text-slate-400 p-1.5 rounded transition text-xs"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
                     <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 relative group">
                         <span class="text-xs font-semibold text-slate-500 block mb-1">3. Lancarkan Terminal Ubuntu (Gunakan Default User)</span>
                         <code class="text-emerald-400 font-mono block text-sm">wsl -d Ubuntu</code>
-                        <button onclick="copyCode(this)" class="absolute right-3 top-3 opacity-0 group-hover:opacity-100 bg-slate-800 hover:bg-slate-700 text-slate-400 p-1.5 rounded transition text-xs"><i class="fa-regular fa-copy"></i> Copy</button>
+                        <button onclick="copyCode(this)" class="absolute right-3 top-3 opacity-0 md:group-hover:opacity-100 bg-slate-800 hover:bg-slate-700 text-slate-400 p-1.5 rounded transition text-xs"><i class="fa-regular fa-copy"></i> Copy</button>
                     </div>
                 </div>
             </section>
@@ -82,5 +90,11 @@
             });
         }
     </script>
+    
+    <!-- CSS Tambahan untuk menyembunyikan scrollbar bawaan pelayar pada mobile -->
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </body>
 </html>
